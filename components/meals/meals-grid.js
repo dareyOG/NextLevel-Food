@@ -5,9 +5,7 @@ function MealsGrid({ meals }) {
   return (
     <ul className={style.meals}>
       {meals.map(meal => (
-        <li key={meal.id}>
-          <MealItem meal={meal} />
-        </li>
+        <MealItem key={meal.id} meal={meal} />
       ))}
     </ul>
   );

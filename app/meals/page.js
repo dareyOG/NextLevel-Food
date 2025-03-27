@@ -2,7 +2,7 @@ import Link from 'next/link';
 import style from './page.module.css';
 import MealsGrid from '@/components/meals/meals-grid';
 
-function MealsPage() {
+async function MealsPage() {
   return (
     <>
       <header className={style.header}>
