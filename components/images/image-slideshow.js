@@ -41,7 +41,7 @@ function ImageSlideShow() {
           key={image.name}
           src={image.image}
           alt={image.alt}
-          className={index === currentImageIndex ? style.active : ' '}
+          className={index === currentImageIndex ? style.active : ''}
         />
       ))}
     </div>

@@ -1,7 +1,7 @@
 import style from './loading.module.css';
 
-function mealsLoader() {
+function MealsLoader() {
   return <p className={style.loading}>Fetching meals...</p>;
 }
 
-export default mealsLoader;
+export default MealsLoader;
