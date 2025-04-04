@@ -1,11 +1,15 @@
 import Image from 'next/image';
-import { getMeal } from '@/lib/meals';
+import { notFound } from 'next/navigation';
 
+import { getMeal } from '@/lib/meals';
 import style from './page.module.css'
 
 async function MealDetailPage({ params }) {
 
   const meal = await getMeal(params.meal)
+
+  // if meal undefined, render the closest not-found page
+  if (!meal) notFound()
 
   // replace line breaks with <br/> tag
   meal.instructions = meal.instructions.replace(/\n/g, '<br/>')
