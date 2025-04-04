@@ -10,14 +10,13 @@ import style from './page.module.css';
 // this component fetches the meals data
 async function Meals() {
   const meals = await getMeals();
-
+  // console.log(meals);
   return <MealsGrid meals={meals} />;
 }
 
 function MealsPage() {
   // async function MealsPage() {
   // const meals = await getMeals();
-
   return (
     <>
       <header className={style.header}>
