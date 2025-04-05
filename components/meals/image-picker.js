@@ -31,7 +31,7 @@ function ImagePicker({ label, name }) {
         <div className={style.picker}>
             <label htmlFor={name}>{label}</label>
             <div className={style.controls}>
-                <input type="file" name={name} id={name} accept='image/png, image/jpeg' className={style.input} ref={imageInputRef} onChange={handleImageChange} />
+                <input type="file" name={name} id={name} accept='image/png, image/jpeg' ref={imageInputRef} onChange={handleImageChange} required className={style.input} />
                 <button type='button' onClick={handleClick} className={style.button}>Pick an Image</button>
                 <div className={style.preview}>{!pickedImage ? <p>No image picked yet</p> : <Image src={pickedImage} alt='user selected image' fill />}</div>
             </div>
