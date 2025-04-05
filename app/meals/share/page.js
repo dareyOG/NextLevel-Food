@@ -1,6 +1,9 @@
-import ImagePicker from '@/components/meals/image-picker';
-import style from './page.module.css'
 import { shareMeal } from '@/lib/actions';
+
+import ImagePicker from '@/components/meals/image-picker';
+import MealsFormSubmit from '@/components/meals/meals-form-submit';
+
+import style from './page.module.css'
 
 function ShareMealPage() {
 
@@ -35,11 +38,15 @@ function ShareMealPage() {
           <textarea id="instructions"
             name="instructions"
             rows="10"
-            required></textarea>
+            required
+          >
+
+          </textarea>
         </p>
         <p className={style.actions}>
-          <button type='submit'>Share Meal</button>
+          <MealsFormSubmit />
         </p>
+
       </form>
     </main>
   </>;
